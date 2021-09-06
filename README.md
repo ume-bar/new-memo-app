@@ -35,3 +35,22 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 https://www.forcia.com/blog/001559.html
 
+memo=# DROP TABLE memo;
+DROP TABLE
+memo=# CREATE TABLE memo
+(id INTEGER not null,
+name TEXT not null,
+memo TEXT not null,
+created_at TIMESTAMP with time zone not null,
+PRIMARY KEY(id));
+CREATE TABLE
+memo=# \d memo
+                          Table "public.memo"
+   Column   |           Type           | Collation | Nullable | Default 
+------------+--------------------------+-----------+----------+---------
+ id         | integer                  |           | not null | 
+ name       | text                     |           | not null | 
+ memo       | text                     |           | not null | 
+ created_at | timestamp with time zone |           | not null | 
+Indexes:
+    "memo_pkey" PRIMARY KEY, btree (id)
