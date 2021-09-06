@@ -9,12 +9,13 @@ const ApiFetch = () => {
   useEffect(() => {
     axios.get("http://localhost:3000/api/data")
     .then(res => {
-        setPosts(res.data)
+        console.log(res.data,"hoge")
+        // setPosts(res.data)
       })
   },[])
   return (
     <div>
-      <ul>
+      <ul>       
         {posts.map(post => <li key={post.id}> {post.title} </li>)}
       </ul>
     </div>
